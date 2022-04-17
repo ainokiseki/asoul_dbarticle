@@ -1,0 +1,22 @@
+{{define "list"}}
+<table class="olt">
+    <tr class="th">
+        <td>讨论</td>
+        <td class="r-count" nowrap="nowrap">作者</td><td align="right">访问时间</td>
+    </tr>
+
+{{range $idx,$ls :=.}}
+
+
+<tr class=""><td class="title">
+{{if $ls.Elite}}
+<span class="elite_topic_lable">精华</span>
+{{end}}
+<a href="./paper/{{$ls.Tid}}" title="{{$ls.Title}}" class="">
+{{$ls.Title}}
+</a></td><td nowrap="nowrap"><a href="https://www.douban.com/people/{{$ls.Uid}}/?_dtcc=1">{{$ls.Author}}</a></td><td nowrap="nowrap" class="r-count">{{$ls.Visit}}</td></tr>
+
+{{end}}
+
+
+</table>

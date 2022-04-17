@@ -1,0 +1,236 @@
+{{define "dbpage"}}
+<!DOCTYPE html>
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw" />
+    <title>
+        asoul同人文爬虫项目
+</title>
+    
+    
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+    
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+
+        <meta name="robots" content="noindex,nofollow">
+
+    <script >var _head_start = new Date();</script>
+    <script src="https://img3.doubanio.com/f/shire/72ced6df41d4d158420cebdd254f9562942464e3/js/jquery.min.js"></script>
+    <script src="https://img3.doubanio.com/f/shire/22ee83f45f94c7a90e73e0ee4acd18f902a6991f/js/douban.js"></script>
+    <link href="https://img3.doubanio.com/f/shire/204847ecc7d679de915c283531d14f16cfbee65e/css/douban.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    
+        
+    </style>
+    
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/4e649e347254472d.css">
+    <script></script>
+
+    <link rel="stylesheet" href="https://img3.doubanio.com/f/group/2f4c6f83940e2bbb76f5a23a7d987b9093919799/css/group/init.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  
+    
+    <script type="text/javascript">var _body_start = new Date();</script>
+    
+   
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/3e96b44/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+
+
+
+    <div class="top-nav-doubanapp">
+  <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+  <div id="doubanapp-tip">
+    <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 <span class="version">6.0</span> 全新发布</a>
+    <a href="javascript: void 0;" class="tip-close">×</a>
+  </div>
+  <div id="top-nav-appintro" class="more-items">
+    <p class="appintro-title">豆瓣</p>
+    <p class="qrcode">扫码直接下载</p>
+    <div class="download">
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=iOS">iPhone</a>
+      <span>·</span>
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=Android" class="download-android">Android</a>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+  </div>
+</div>
+
+
+
+
+      
+    
+
+
+
+
+
+
+
+
+
+<div id="db-nav-group" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary clearfix">
+    <div class="nav-logo">
+      <a href="https://www.douban.com/group/">Asoul同人文爬虫</a>
+    </div>
+
+    <div class="nav-items">
+    <ul>
+        
+        <li class="nav-item-first"><a href="https://www.douban.com/group/">我的小组</a></li>
+      <li><a href="https://www.douban.com/group/explore">精选</a></li>
+      <li><a href="https://www.douban.com/group/explore/culture">文化</a></li>
+      <li><a href="https://www.douban.com/group/explore/travel">行摄</a></li>
+      <li><a href="https://www.douban.com/group/explore/ent">娱乐</a></li>
+      <li><a href="https://www.douban.com/group/explore/fashion">时尚</a></li>
+      <li><a href="https://www.douban.com/group/explore/life">生活</a></li>
+      <li><a href="https://www.douban.com/group/explore/tech">科技</a></li>
+   </ul>
+   </div>
+
+    <div class="nav-search">
+      <form id='form' action="https://www.douban.com/group/search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          
+          <input type="hidden" name="cat" value="1019" />
+          <label for="inp-query">小组、话题</label>
+          <div class="inp"><input id="inp-query" name="q" size="22" maxlength="60" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  </div>
+
+</div>
+
+
+
+
+
+    <div id="wrapper">
+        
+
+        
+<div id="content">
+    
+    <h1>
+        {{.Title}}
+</h1>
+
+    <div class="grid-16-8 clearfix">
+        
+        
+        <div class="article">
+               
+    
+
+    
+
+    <div id="group-new-topic-bar" class="discussion">
+
+                <a href="new_topic" class="dui-button secondary apricot s btn-post ">
+                    发言
+                </a>
+    </div>
+
+    <div class="">
+        
+
+{{template "list-e" .Paper}}
+
+
+
+</div>
+
+
+
+
+    </div>
+{{block "pagenav" .}}
+
+{{end}}
+
+      </div>
+
+
+
+
+
+    <div class="aside">
+            
+
+
+
+
+
+<!-- douban app begin -->
+<div id="dale_group_more_discussion_inner_top"></div>
+<div id="dale_group_more_discussion_download_top"></div>
+<!-- douban app end -->
+
+<!-- douban ad begin -->
+<div id="dale_group_more_discussion_top_right"></div>
+<!-- douban ad end -->
+
+    </div>
+    <div class="extra">
+        
+    </div>
+</div>
+</div>
+
+    
+<div id="footer">
+
+
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+
+
+</div>
+
+</div>
+
+
+<script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/3cca0dde5da05fed.js"></script>
+
+
+
+</body>
+
+</html>
+
+
+{{end}}
+

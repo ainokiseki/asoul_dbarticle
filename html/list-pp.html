@@ -1,0 +1,20 @@
+{{define "list-e"}}
+<table class="olt">
+    <tr class="th">
+        <td>讨论</td>
+        <td nowrap="nowrap">平台</td><td align="right">url</td>
+    </tr>
+        
+{{range $idx,$ls :=. }}
+
+
+<tr class=""><td class="title"><a href="../detail/{{$ls.Id}}" title="
+    {{$ls.Title}}
+    " class="">
+    {{$ls.Title}}
+    </a></td>
+    <td nowrap="nowrap">{{$ls.Platform}}</td><td nowrap="nowrap" align="right" class="r-count"><a href="{{$ls.Url}}" >原始链接</a></td></tr>
+{{end}}
+</table>
+{{end}}
+

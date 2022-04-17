@@ -1,0 +1,45 @@
+{{define "article"}}
+<!DOCTYPE HTML>
+<html lang="zh" dir="ltr">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8">
+
+		<title>{{.Title}} &mdash; Write.as</title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.writeas.net/css/write.3966741d26a35160e79b7.css" />
+		
+		<link rel="shortcut icon" href="https://cdn.writeas.net/favicon.ico" />
+	</head>
+	<body id="post">
+
+		<div id="overlay"></div>
+		
+		<header>
+			<h1 dir="ltr"><a href="/">write.as</a></h1>
+			<nav>
+				<span class="views owner-visible" dir="ltr"><strong>4,072</strong> views</span>
+				
+				
+			</nav>
+		</header>
+{{.Mainfloor}}
+
+
+
+
+		<div id="modal-share" class="modal">
+			<h2>Share this post</h2>
+			<div class="body short">
+				<p style="text-align: left">Each published post has a secret, unique URL you can share with anyone. This is that URL:</p>
+				<input id="share-url" type="text" style="width: 90%; text-align: center; font-size: 1.4em; margin-bottom: 0.75em;"value="https://write.as/oj5bly5lki3ok" />
+				<p style="text-align: left">Send it to a friend, share it across the web, or maybe <a id="twitter-share" href="https://twitter.com/intent/tweet?related=writeas__,readwriteas&amp;hashtags=writeas&amp;text=%E3%80%90%E7%90%B3%E5%98%89%E8%B4%9D%E3%80%91%E5%85%B1%E7%BD%AA%EF%BC%88ch1%EF%BC%89%0A%E4%B8%80%E3%80%81%0A%0A&#43;%0A%0A%E4%B9%83%E7%90%B3%E6%90%AC%E6%9D%A5%E6%96%B0%E5%AE%B6%E6%9C%89%E4%B8%80%E9%98%B5%E5%AD%90%EF%BC%8C%E5%A5%B9%E6%89%80%E4%BB%8E%E4%BA%8B%E7%9A%84%E5%8C%BB%E9%99%A2%E8%BF%99%E4%B8%A4%E5%B9%B4%E4%B8%80%E7%9B%B4%E5%9C%A8%E8%A7%84%E5%88%92%E7%9D%80%E5%BE%80%E6%96%B0%E5%9F%8E%E5%8C%BA%E6%90%AC%E8%BF%81%EF%BC%8C%E9%83%BD%E5%B8%82%E4%BA%BA%E5%8F%A3%E9%80%90%E6%AD%A5%E8%BF%81%E7%A7%BB%EF%BC%8C%E5%85%AC%E5%85%B1%E8%AE%BE%E6%96%BD%E4%B9%9F%E5%BE%97%E8%B7%9F%E7%9D%80%E5%8A%A8%E5%9C%B0%E6%96%B9%EF%BC%8C%E6%96%B0%E5%8C%BB%E9%99%A2%E8%BD%B0%E8%BD%B0%E7%83%88%E7%83%88%E5%9C%B0%E5%8A%A8%E5%B7%A5%E4%BA%86%E4%B8%A4%E5%B9%B4%EF%BC%8C%E8%BF%99%E6%AE%B5%E6%97%B6%E9%97%B4%E6%89%8D%E7%BB%88%E4%BA%8E%E8%90%BD%E5%88%B0%E4%BA%86%E5%AE%9E%E5%A4%84%E3%80%82%0A%0A%E5%90%8C%E4%BA%8B%E8%BF%98%E5%A4%84%E5%9C%A8%E8%AE%BE%E5%A4%87%E5%85%A8%E9%83%A8%E6%9B%B4%E8%BF%AD%E7%9A%84%E6%96%B0%E5%A5%87%E6%9C%9F%EF%BC%8C%E5%87%A0%E4%B8%AA%E8%BF%98%E7%AE%97%E7%9B%B8%E5%A4%84%E7%9A%84%E6%9C%8B%E5%8F%8B%E7%BA%A6%E7%9D%80%E4%B8%8B%E7%8F%AD%E4%B9%8B%E5%90%8E%E4%B8%80%E8%B5%B7%E5%90%83%E9%A5%AD%EF%BC%8C%E4%B9%83%E7%90%B3%E5%8F%AA%E6%98%AF%E6%8C%82%E4%B8%8A%E4%BA%86%E7%99%BD%E5%A4%A7%E8%A4%82%EF%BC%8C%E5%8F%88%E4%B8%80%E6%AC%A1%E7%A1%AE%E8%AE%A4%E5%8A%9E%E5%85%AC%E5%AE%A4%E9%97%A8%E9%94%81%E5%B7%B2%E7%BB%8F%E6%89%A3%E7%B4%A7%E4%B9%8B%E5%90%8E%E6%89%8D%E8%BD%AC%E8%BA%AB%E7%96%B2%E6%83%AB%E5%9C%B0%E7%AC%91%E4%BA%86%E7%AC%91%EF%BC%9A%E2%80%9C%E6%88%91%E5%B0%B1%E4%B8%8D%E4%BA%86%E3%80%82%E2%80%9D%0A%0A%E5%8E%9F%E6%9D%A5%E7%A7%9F%E7%9A%84%E6%88%BF%E5%AD%90%E7%A6%BB%E6%96%B0%E5%8C%BB%E9%99%A2%E5%A4%AA%E8%BF%9C%EF%BC%8C%E4%B8%8A%E4%B8%8B%E7%8F%AD%E8%80%97%E8%B4%B9%E7%9A%84%E6%97%B6%E9%97%B4%E9%95%BF%E5%BE%97%E4%B9%83%E7%90%B3%E5%9C%A8%E5%BC%80%E8%BD%A6%E7%9A%84%E8%B7%AF%E4%B8%8A%E9%83%BD%E8%83%BD%E5%86%8D%E5%9B%B0%E5%80%A6%E5%BE%97%E7%9D%A1%E4%B8%AA%E5%9B%9E%E7%AC%BC%E8%A7%89%EF%BC%8C%E4%B8%BA%E4%BA%86%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%9F%E5%91%BD%E5%AE%89%E5%85%A8%E8%80%83%E8%99%91%EF%BC%8C%E5%A5%B9%E8%BF%99...&#43;https%3A%2F%2Fwrite.as%2Foj5bly5lki3ok">tweet it</a>. <a href="https://guides.write.as/#sharing-your-post">Learn more</a>.</p>
+			</div>
+		</div>
+
+		<footer dir="ltr"><hr><nav><p style="font-size: 0.9em">用<a class="home pubd" href="https://write.as/">write.as</a>来发布</p></nav></footer>
+
+		
+	</body>	
+		
+
+</html>
+{{end}}

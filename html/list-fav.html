@@ -1,0 +1,21 @@
+{{define "list-e"}}
+<table class="olt">
+    <tr class="th">
+        <td>讨论</td>
+        <td>作者</td>
+        <td class="r-count" nowrap="nowrap">收藏数</td><td align="right">原始链接</td>
+    </tr>
+        
+{{range $idx,$ls :=. }}
+
+
+<tr class=""><td class="title"><a href="./paper/{{$ls.Tid}}" title="
+    {{$ls.Title}}
+    " class="">
+    {{$ls.Title}}
+    </a></td>
+    <td><a href="https://www.douban.com/people/{{$ls.Uid}}">{{$ls.Author}}</a></td>
+    <td nowrap="nowrap">{{$ls.Fav}}</td><td nowrap="nowrap" class="r-count"><a href="https://www.douban.com/group/topic/{{$ls.Tid}}/?_dtcc=1">原始链接</a></td></tr>
+{{end}}
+</table>
+{{end}}
